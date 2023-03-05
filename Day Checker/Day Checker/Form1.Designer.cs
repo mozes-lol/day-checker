@@ -1,7 +1,7 @@
 ﻿
 namespace Day_Checker
 {
-    partial class Form1
+    partial class Form_Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,41 +29,64 @@ namespace Day_Checker
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
+            this.dateTimePicker_from = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_to = new System.Windows.Forms.DateTimePicker();
+            this.label_from = new System.Windows.Forms.Label();
+            this.label_to = new System.Windows.Forms.Label();
+            this.label_dayCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dateTimePicker_from
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 55);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 0;
+            resources.ApplyResources(this.dateTimePicker_from, "dateTimePicker_from");
+            this.dateTimePicker_from.Name = "dateTimePicker_from";
+            this.dateTimePicker_from.ValueChanged += new System.EventHandler(this.dateTimePicker_from_ValueChanged);
             // 
-            // dateTimePicker2
+            // dateTimePicker_to
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(265, 55);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 1;
+            resources.ApplyResources(this.dateTimePicker_to, "dateTimePicker_to");
+            this.dateTimePicker_to.Name = "dateTimePicker_to";
+            this.dateTimePicker_to.ValueChanged += new System.EventHandler(this.dateTimePicker_to_ValueChanged);
             // 
-            // Form1
+            // label_from
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this.label_from, "label_from");
+            this.label_from.Name = "label_from";
+            // 
+            // label_to
+            // 
+            resources.ApplyResources(this.label_to, "label_to");
+            this.label_to.Name = "label_to";
+            // 
+            // label_dayCount
+            // 
+            resources.ApplyResources(this.label_dayCount, "label_dayCount");
+            this.label_dayCount.Name = "label_dayCount";
+            // 
+            // Form_Main
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 450);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.label_dayCount);
+            this.Controls.Add(this.label_to);
+            this.Controls.Add(this.label_from);
+            this.Controls.Add(this.dateTimePicker_to);
+            this.Controls.Add(this.dateTimePicker_from);
+            this.Name = "Form_Main";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_from;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_to;
+        private System.Windows.Forms.Label label_from;
+        private System.Windows.Forms.Label label_to;
+        private System.Windows.Forms.Label label_dayCount;
     }
 }
 
